@@ -1,0 +1,7 @@
+#!/bin/bash
+
+while true; do
+#    inotify-hookable --watch-directories ./ -c 'docker restart apiplatform233_client_1; docker logs --tail 30 -f apiplatform233_client_1'
+    inotify-hookable --watch-directories ./ -c 'docker restart apiplatform233_client_1;'
+    echo "== $(date) : executed, continuing to monitor..."
+done;
